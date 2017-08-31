@@ -1,11 +1,10 @@
 package top.smartsport.www.fragment;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.format.DateUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -13,13 +12,11 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.view.annotation.ContentView;
-import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.List;
 
 import top.smartsport.www.R;
-import top.smartsport.www.activity.BSChoiceActivity;
 import top.smartsport.www.activity.BSDetailActivity;
 import top.smartsport.www.activity.BSDetailBMActivity;
 import top.smartsport.www.adapter.BSssAdapter;
@@ -100,7 +97,8 @@ public class BSSSFragment extends BaseFragment {
                 refreshView.getFooterLoadingLayout().setLastUpdatedLabel(label);
             }
         });
-
+        ptrlv.getRefreshableView().setDivider(new ColorDrawable(Color.parseColor("#F2F2F2")));
+        ptrlv.getRefreshableView().setDividerHeight(20);
         ptrlv.getRefreshableView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {

@@ -84,6 +84,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/ll_account_set"
                 android:layout_width="150px"
@@ -101,11 +102,18 @@
 
 
         </RelativeLayout>
-
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/white"
+            android:layout_below="@+id/rl_account_set"
+            android:layout_marginTop="45px"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="132px"
-            android:layout_below="@+id/rl_account_set"
+            android:layout_below="@+id/line"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -117,6 +125,11 @@
                 android:text="身高：--"
                 android:textColor="@color/white"
                 android:textSize="42px" />
+            <View
+                android:layout_width="1px"
+                android:layout_height="42px"
+                android:background="#000000"
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -126,6 +139,11 @@
                 android:text="体重：--"
                 android:textColor="@color/white"
                 android:textSize="42px" />
+            <View
+                android:layout_width="1px"
+                android:layout_height="42px"
+                android:background="#000000"
+                />
 
             <TextView
                 android:layout_width="0dp"
